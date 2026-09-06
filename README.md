@@ -20,7 +20,7 @@ The HR and Supply Chain pages were reviewed during QA. HR is intentionally exclu
 - **Transformation:** Power Query was used for data preparation, typing, shaping, and model-ready outputs.
 - **Analysis:** DAX measures provide filter-aware KPIs and business ratios.
 
-The original source `.pbix` is kept untouched. A rebuilt public-portfolio copy is included with the report-definition corrections documented in [`docs/release-notes.md`](docs/release-notes.md).
+The original source `.pbix` is kept untouched. The rebuilt public-portfolio file is [`Enterprise Operations Analytics - Public Portfolio.pbix`](Enterprise%20Operations%20Analytics%20-%20Public%20Portfolio.pbix), with its report-definition corrections documented in [`docs/release-notes.md`](docs/release-notes.md).
 
 ## Key measures
 

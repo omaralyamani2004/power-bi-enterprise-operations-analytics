@@ -4,7 +4,7 @@
 
 `Enterprise Operations Analytics.pbix`
 
-The source file was preserved. The public portfolio file is a derived copy intended for the Adventure Works training-data showcase.
+The source file was preserved. The public portfolio file is `Enterprise Operations Analytics - Public Portfolio.pbix`, a derived copy intended for the Adventure Works training-data showcase.
 
 ## Corrections applied
 
