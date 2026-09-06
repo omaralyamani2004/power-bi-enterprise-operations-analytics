@@ -36,6 +36,7 @@ The original `.pbix` is not uploaded because it contains the embedded model and 
 | Avg Spending | Average customer spend by selected segment. |
 
 See [`docs/measure-catalog.md`](docs/measure-catalog.md) for the curated measure catalog and [`docs/data-model-and-process.md`](docs/data-model-and-process.md) for the delivery process.
+See [`docs/qa-validation.md`](docs/qa-validation.md) for the reconciliation checks and publication gate.
 
 ## Verified headline insights
 
