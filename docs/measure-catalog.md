@@ -9,8 +9,8 @@ The report contains more calculations than are useful to list in a portfolio. Th
 | `Total Revenue` | Aggregates sales revenue under the active date, product, and territory filters. | Tracks the size of the business and compares performance across categories and regions. |
 | `Total COGS` | Aggregates cost of goods sold. | Highlights cost pressure and supports gross-profit analysis. |
 | `Gross Profit Margin` | Calculates gross profit as a percentage of revenue. | Separates high-volume growth from profitable growth. |
-| `YoY Revenue Growth %` | Compares revenue with the comparable prior-year period. | Shows growth momentum in an executive view. |
-| `Revenue by Ship Date` | Evaluates revenue using the shipping-date context. | Supports operational timing and fulfillment analysis. |
+| `YoY Revenue Growth %` | Compares revenue with the comparable prior-year period when the shared date dimension covers the full fact range. | Shows growth momentum in an executive view after date coverage is reconciled. |
+| `Revenue by Ship Date` | Evaluates revenue using the shipping-date context through the inactive ship-date relationship. | Supports operational timing and fulfillment analysis after the shared date range is complete. |
 
 ## Customer Analysis
 
@@ -36,3 +36,7 @@ The report contains more calculations than are useful to list in a portfolio. Th
 - Ratios use protected division logic so zero-denominator contexts do not create misleading errors.
 - Distinct-count KPIs should use a consistent employee/customer key across cards, tables, and demographic breakdowns.
 - A measure should be validated at total level and at one granular level before it is used in a public insight.
+
+## Current validation note
+
+The commercial KPI measures reconcile to the downloaded PBIX totals. Year-over-year and date-role measures remain subject to the shared date-table coverage issue documented in [`docs/data-model-and-process.md`](data-model-and-process.md); those measures should not support a public claim until the date table is extended through the latest fact date.
