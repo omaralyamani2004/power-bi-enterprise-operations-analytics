@@ -14,4 +14,4 @@ With 2013 selected, Customer Analysis reports `12.48K` customers, `1.17` average
 
 ## Responsible use of the insight
 
-These insights are based on Adventure Works training data and are intended to demonstrate analytical reasoning. They are not claims about a real company's performance. Customer-level detail should be refreshed and reconciled against the total and filtered customer context before it is used as a business claim.
+These insights are based on Adventure Works training data and are intended to demonstrate analytical reasoning. They are not claims about a real company's performance. Any customer-level conclusion should be read within its selected date and segment context and checked against the relevant total before being used as a business claim.

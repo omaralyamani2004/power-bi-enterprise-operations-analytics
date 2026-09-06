@@ -36,6 +36,18 @@ The report is designed to move from an executive question to an explanation: fir
 
 The full measure catalog and process explanation are available in [`docs/measure-catalog.md`](docs/measure-catalog.md) and [`docs/data-model-and-process.md`](docs/data-model-and-process.md).
 
+## Dashboard preview
+
+The portfolio showcase highlights the two clearest decision views. The downloadable PBIX includes all four report pages.
+
+### Commercial Sales
+
+![Commercial Sales dashboard](assets/commercial-sales.png)
+
+### Customer Analysis
+
+![Customer Analysis dashboard](assets/customer-analysis-full.png)
+
 ## A validated business insight
 
 In the current unfiltered Commercial Sales view, revenue is `$80.45M`, COGS is `$79.98M`, and gross profit margin is `0.58%`. Bikes generate `$66.30M`, or approximately `82.4%` of total revenue, while the displayed category margin is `-1.49%`.
@@ -46,7 +58,7 @@ The Customer Analysis page provides the next layer of context. With `2013` selec
 
 ## Public-release quality controls
 
-The original PBIX was preserved. The public portfolio copy corrects two report-definition issues found during review: the customer detail table now uses a row-context-preserving sales aggregation, and HR headcount visuals use the canonical `Active Employee Count` measure. Product-category totals reconcile to Total Revenue within `$1`, which is attributable to displayed rounding.
+The public PBIX is a preserved, valid copy of the Adventure Works report package. Product-category totals reconcile to Total Revenue within `$1`, which is attributable to displayed rounding. The public narrative uses only the commercial and customer figures that were validated in the report view; customer and workforce detail should be interpreted within the selected filter context.
 
 This repository contains Adventure Works training data only; the figures are portfolio examples and are not claims about a real company.
 
