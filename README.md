@@ -20,7 +20,7 @@ The HR and Supply Chain pages were reviewed during QA. HR is intentionally exclu
 - **Transformation:** Power Query was used for data preparation, typing, shaping, and model-ready outputs.
 - **Analysis:** DAX measures provide filter-aware KPIs and business ratios.
 
-The original `.pbix` is not uploaded because it contains the embedded model and report definition. The repository focuses on the portfolio evidence: screenshots, methodology, measure documentation, and insights.
+The original source `.pbix` is kept untouched. A rebuilt public-portfolio copy is included with the report-definition corrections documented in [`docs/release-notes.md`](docs/release-notes.md).
 
 ## Key measures
 
@@ -49,7 +49,7 @@ These are portfolio examples from training data, not claims about a real company
 
 ## QA note
 
-During review, the Customer Analysis detail table displayed the same `$24.637M` revenue value for multiple customer rows. The HR page also showed a reconciliation issue between the 290-employee KPI and the gender breakdown. These visuals are therefore not used as final decision insights until their filter context and distinct-count definitions are corrected.
+The public portfolio copy fixes the customer-detail revenue projection to preserve customer row context and aligns HR headcount visuals to the canonical `Active Employee Count` measure. The source file remains unchanged, and the validation evidence is recorded in [`docs/qa-validation.md`](docs/qa-validation.md).
 
 ## Screenshots
 
