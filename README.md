@@ -68,4 +68,3 @@ Power BI · Power Query · DAX · Star-schema modeling · KPI design · Business
 ## Author
 
 Omar Alyamani — Data Analyst / BI Analyst
-

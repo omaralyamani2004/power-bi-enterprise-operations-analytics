@@ -36,4 +36,3 @@ The report contains more calculations than are useful to list in a portfolio. Th
 - Ratios use protected division logic so zero-denominator contexts do not create misleading errors.
 - Distinct-count KPIs should use a consistent employee/customer key across cards, tables, and demographic breakdowns.
 - A measure should be validated at total level and at one granular level before it is used in a public insight.
-

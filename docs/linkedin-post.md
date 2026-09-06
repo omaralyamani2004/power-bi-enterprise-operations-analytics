@@ -22,4 +22,3 @@ I’m sharing the methodology, curated measure catalog, screenshots, and QA note
 [GitHub repository](https://github.com/omaralyamani2004/power-bi-enterprise-operations-analytics)
 
 #PowerBI #DAX #PowerQuery #BusinessIntelligence #DataAnalytics #AdventureWorks
-

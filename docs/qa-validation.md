@@ -44,4 +44,3 @@ The HR page showed `290` on the employee KPI while the gender breakdown showed `
 ## Portfolio decision
 
 Only Commercial Sales and the validated headline/segment visuals from Customer Analysis are included in the public showcase. The customer detail table and HR page remain documented as QA findings, not as final business claims.
-

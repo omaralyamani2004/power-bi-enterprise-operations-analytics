@@ -23,4 +23,3 @@ The page title typo `HR ANALYSIS DASHBORARD` was corrected to `HR ANALYSIS DASHB
 ## Release gate
 
 The public release includes the rebuilt `.pbix`, the two strongest screenshots, the measure catalog, the model/process explanation, the insight write-up, and the QA validation log. Insights use only values that can be reconciled from the visible report totals or are explicitly labelled as approximate.
-

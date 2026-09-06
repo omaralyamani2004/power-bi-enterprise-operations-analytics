@@ -35,4 +35,3 @@ The naming convention separates dimensions (`Dim...`) from facts (`Fact...`) and
 - **Customer Analysis:** selected for the public showcase, with the detailed customer table marked for measure-context repair before it is used for customer-level decisions.
 - **HR Analysis:** not published as a finished insight because the total employee KPI and gender breakdown currently do not reconcile.
 - **Supply Chain & Inventory:** not included in the first public release because it needs stronger narrative framing and validation.
-
