@@ -35,3 +35,4 @@ The naming convention separates dimensions (`Dim...`) from facts (`Fact...`) and
 - **Customer Analysis:** included in the PBIX and shown as a supporting perspective; customer-level findings should be interpreted within the selected date and segment filters.
 - **HR Analysis:** included in the PBIX but not used as a finished public insight because the total employee KPI and demographic breakdown require additional in-report reconciliation.
 - **Supply Chain & Inventory:** not included in the first public release because it needs stronger narrative framing and validation.
+
