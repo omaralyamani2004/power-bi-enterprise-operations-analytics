@@ -2,7 +2,7 @@
 
 I’m pleased to share an Enterprise Operations Analytics dashboard built in Power BI using the Adventure Works training dataset.
 
-The report brings together executive sales performance, customer behavior, workforce analysis, and inventory context in a role-oriented reporting experience.
+The report was developed as a broader enterprise operations model; the public showcase focuses on the Commercial Sales and Customer Analysis views that passed the first reconciliation checks.
 
 What I implemented:
 
@@ -15,7 +15,7 @@ What I implemented:
 
 One example of the type of insight the dashboard surfaces: the current Commercial Sales view shows $80.45M in revenue, while Bikes contribute approximately 82.4% of total revenue but display a -1.49% gross margin. That contrast highlights a potential concentration and profitability risk that deserves investigation beyond revenue growth alone.
 
-The Customer Analysis page also shows how customer volume, order frequency, returning-customer behavior, geography, and customer segments can be analyzed together.
+The Customer Analysis page also shows how customer volume, order frequency, returning-customer behavior, geography, and customer segments can be analyzed together. Detailed customer-level visuals remain gated until their filter context is fully reconciled.
 
 I’m sharing the methodology, curated measure catalog, screenshots, and QA notes in the GitHub repository:
 
