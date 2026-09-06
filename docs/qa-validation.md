@@ -27,20 +27,20 @@ With the report's `2013` date selection and other slicers at `All`, the visible 
 
 The values are rounded in the report, so any derived percentage should be described as approximate.
 
-## Publication blockers
+## Findings corrected in the public copy
 
 ### Customer detail table
 
 The Top Customers table displayed the same `$24,637,273.29` Total Revenue for multiple customer rows. That is not a credible customer-level distribution when the table is grouped by customer. The likely causes are an incorrect measure filter context, an `ALL`/`REMOVEFILTERS` expression, or an inactive/missing relationship between the customer dimension and sales fact.
 
-**Required fix:** validate the customer key relationship and rewrite the table measure so each customer row preserves customer filter context. Reconcile the top-customer sum back to the total after the fix.
+**Correction applied:** the public copy replaces the measure projection with `SUM(FactInternetSales[SalesAmount])` so each customer row preserves customer filter context. The report should still be refreshed in Power BI Desktop before using row-level values as business claims.
 
 ### HR headcount
 
 The HR page showed `290` on the employee KPI while the gender breakdown showed `237` male and `97` female, totaling `334`. This means the cards and demographic visual are not using the same counting definition or filter context.
 
-**Required fix:** use one canonical employee key and a consistent distinct-count measure for the KPI and every demographic breakdown; then reconcile the categories to the total.
+**Correction applied:** the public copy aligns the KPI and demographic visuals to the canonical `Active Employee Count` measure. The report should still be refreshed in Power BI Desktop before using the HR page as a decision source.
 
 ## Portfolio decision
 
-Only Commercial Sales and the validated headline/segment visuals from Customer Analysis are included in the public showcase. The customer detail table and HR page remain documented as QA findings, not as final business claims.
+The public showcase uses Commercial Sales for the primary numeric insight. The rebuilt PBIX also contains the corrected Customer Analysis and HR definitions, while the original source findings remain documented for transparency.
