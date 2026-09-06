@@ -1,0 +1,10 @@
+# Power BI source files are intentionally excluded from the public portfolio repository.
+*.pbix
+*.pbit
+*.bak
+
+# Local and temporary files
+~$*
+.DS_Store
+Thumbs.db
+
