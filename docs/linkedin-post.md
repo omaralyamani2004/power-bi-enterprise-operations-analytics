@@ -19,7 +19,7 @@ The Customer Analysis page also shows how customer volume, order frequency, retu
 
 I’m sharing the methodology, curated measure catalog, screenshots, and QA notes in the GitHub repository:
 
-[GitHub repository link]
+[GitHub repository](https://github.com/omaralyamani2004/power-bi-enterprise-operations-analytics)
 
 #PowerBI #DAX #PowerQuery #BusinessIntelligence #DataAnalytics #AdventureWorks
 
