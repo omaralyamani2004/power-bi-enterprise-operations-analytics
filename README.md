@@ -64,7 +64,7 @@ This repository contains Adventure Works training data only; the figures are por
 
 ## Repository contents
 
-- [`Enterprise Operations Analytics - Public Portfolio.pbix`](Enterprise%20Operations%20Analytics%20-%20Public%20Portfolio.pbix) — rebuilt portfolio report.
+- [`Enterprise Operations Analytics - Public Portfolio.pbix`](Enterprise%20Operations%20Analytics%20-%20Public%20Portfolio.pbix) — preserved public copy of the valid report package.
 - [`docs/data-model-and-process.md`](docs/data-model-and-process.md) — model architecture and delivery narrative.
 - [`docs/measure-catalog.md`](docs/measure-catalog.md) — selected DAX measure explanations.
 - [`docs/business-insights.md`](docs/business-insights.md) — decision-oriented insight write-up.
@@ -77,4 +77,3 @@ Power BI · Power Query · DAX · Star-schema modeling · KPI design · Business
 ## Author
 
 Omar Alyamani — Data Analyst / BI Analyst
-
