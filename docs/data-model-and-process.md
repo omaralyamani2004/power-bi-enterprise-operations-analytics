@@ -32,6 +32,7 @@ The naming convention separates dimensions (`Dim...`) from facts (`Fact...`) and
 ## QA decisions for this portfolio version
 
 - **Commercial Sales:** selected for the public showcase because the headline KPIs, category totals, and regional story form a clear executive narrative.
-- **Customer Analysis:** selected for the public showcase, with the detailed customer table marked for measure-context repair before it is used for customer-level decisions.
+- **Customer Analysis:** selected for the public showcase; the public PBIX uses a row-context-preserving sales aggregation for customer-level detail. Customer-level findings should still be interpreted within the selected date and segment filters.
 - **HR Analysis:** not published as a finished insight because the total employee KPI and gender breakdown currently do not reconcile.
 - **Supply Chain & Inventory:** not included in the first public release because it needs stronger narrative framing and validation.
+
