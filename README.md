@@ -40,25 +40,27 @@ The full measure catalog and process explanation are available in [`docs/measure
 
 The portfolio showcase highlights the two clearest decision views. The downloadable PBIX includes all four report pages.
 
-### Commercial Sales
+### Commercial Sales Loop
 
-![Commercial Sales dashboard](assets/commercial-sales.png)
+![Commercial Sales dashboard](assets/commercial-sales-loop.png)
 
 ### Customer Analysis
 
-![Customer Analysis dashboard](assets/customer-analysis-full.png)
+![Customer Analysis dashboard](assets/customer-analysis.png)
 
 ## A validated business insight
 
-In the current unfiltered Commercial Sales view, revenue is `$80.45M`, COGS is `$79.98M`, and gross profit margin is `0.58%`. Bikes generate `$66.30M`, or approximately `82.4%` of total revenue, while the displayed category margin is `-1.49%`.
+In the current unfiltered Commercial Sales Loop view, revenue is `$29.36M`, COGS is `$17.28M`, and gross profit margin is `41.15%`. Bikes generate `$28.32M`, or approximately `96.46%` of total revenue, at a `40.63%` category margin.
 
-The important conclusion is not simply that Bikes are the best-selling category. It is that the largest revenue stream is also the main profitability risk. A commercial manager would use this result to investigate pricing, discounting, product cost, and sales mix before treating revenue growth as healthy growth.
+The important conclusion is that Bikes dominate revenue concentration, while Accessories lead on order quantity and category margin. This separates scale from efficiency: Bikes drive the commercial result, while Accessories show the strongest margin profile and may warrant a product-mix or cross-sell review.
 
-The Customer Analysis page provides the next layer of context. With `2013` selected, it shows `12.48K` customers, `1.17` average orders per customer, `$25M` total sales, and approximately `1K` returning customers. Since these values are rounded in the report, any derived customer percentage is described as approximate.
+The Customer Analysis page provides the next layer of context. In the current unfiltered view, it shows `18,484` customers, `1.50` average orders per customer, `$29.36M` total sales, and `6,865` returning customers, equivalent to approximately `37.1%` of the customer base. These values were calculated directly from the model behind the downloaded PBIX.
 
-## Public-release quality controls
+## Validation status
 
-The public PBIX is a preserved, valid copy of the Adventure Works report package. Product-category totals reconcile to Total Revenue within `$1`, which is attributable to displayed rounding. The public narrative uses only the commercial and customer figures that were validated in the report view; customer and workforce detail should be interpreted within the selected filter context.
+The public PBIX is a valid Adventure Works report package. The downloaded GitHub copy opened in Power BI Desktop and its local model returned the same headline values shown in the dashboard. Product-category revenue reconciles exactly to Total Revenue, and the customer, product, territory, and sales keys reconcile at model level.
+
+One release-blocking model issue remains: `DimDate` ends on `26 September 2013`, while sales extend to `28 January 2014`, shipping extends to `4 February 2014`, and due dates extend to `9 February 2014`. Until the date dimension is extended and the report pages use one consistent date relationship, year-based filters and YoY analysis can omit or classify later transactions as blank. LinkedIn publication should wait for that repair.
 
 This repository contains Adventure Works training data only; the figures are portfolio examples and are not claims about a real company.
 

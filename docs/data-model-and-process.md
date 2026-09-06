@@ -31,8 +31,13 @@ The naming convention separates dimensions (`Dim...`) from facts (`Fact...`) and
 
 ## QA decisions for this portfolio version
 
-- **Commercial Sales:** selected for the public showcase because the headline KPIs, category totals, and regional story form a clear executive narrative.
-- **Customer Analysis:** included in the PBIX and shown as a supporting perspective; customer-level findings should be interpreted within the selected date and segment filters.
+- **Commercial Sales Loop:** headline KPIs, category totals, and regional results were reconciled directly against the local Power BI model. Bikes account for approximately `96.46%` of revenue; Accessories lead order quantity and category margin.
+- **Customer Analysis:** headline customer values reconcile to the model: `18,484` customers, `1.50` average orders per customer, and `6,865` returning customers.
 - **HR Analysis:** included in the PBIX but not used as a finished public insight because the total employee KPI and demographic breakdown require additional in-report reconciliation.
 - **Supply Chain & Inventory:** not included in the first public release because it needs stronger narrative framing and validation.
 
+## Release blockers found during validation
+
+- **Date coverage:** `DimDate` ends on `26 September 2013`, while fact tables contain transactions through 2014. Extend the shared date table to the maximum relevant fact date before publishing year-based or YoY claims.
+- **Date consistency:** the Commercial Sales Loop year slicer uses an auto-generated due-date table, while several charts and the Customer Analysis page use `DimDate`. Replace these with one intentional date dimension and explicit role-playing relationships.
+- **Azure Maps portability:** the Commercial Sales Loop contains an `azureMap` visual. It rendered in the captured view, but a public PBIX can require user sign-in or service availability for that visual. Replace it with a credential-free visual if zero-setup portability is required.
