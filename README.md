@@ -1,69 +1,66 @@
 # Enterprise Operations Analytics | Power BI
 
-An executive-ready Power BI portfolio project built with the Adventure Works training dataset. The report converts sales, customer, workforce, and inventory data into role-oriented views for commercial and operational decision-making.
+Enterprise Operations Analytics is a Power BI case study built with Adventure Works training data. It shows how a reusable semantic model can turn sales, customer, workforce, and inventory data into a reporting experience that supports commercial and operational decisions.
 
-## Portfolio scope
+## The business question
 
-This public repository contains the two strongest, publication-ready views from the report:
+Revenue alone does not explain whether growth is healthy. A decision-maker needs to see revenue, cost, margin, product mix, regional performance, customer engagement, and workforce context in the same analytical environment.
 
-1. **Commercial Sales** — revenue, cost, margin, product-category performance, and sales-region analysis.
-2. **Customer Analysis** — customer base, order frequency, returning customers, customer segmentation, and geographic performance.
+This project answers that need through one report with four connected perspectives:
 
-The HR and Supply Chain pages were reviewed during QA. HR is intentionally excluded from the public showcase until its headcount definitions are reconciled; Supply Chain is retained as a future enhancement rather than presented as a finished portfolio page.
+- **Commercial Sales:** revenue, COGS, gross margin, product mix, and regional performance.
+- **Customer Analysis:** customer reach, order frequency, repeat customers, segmentation, and geography.
+- **HR Analysis Dashboard:** employee count, tenure, job group, gender, and hiring trend.
+- **Supply Chain & Inventory:** stock balance, units in, units out, inventory value, and category movement.
 
-## Data and model
+The public narrative focuses on the Commercial Sales and Customer Analysis pages because they provide the clearest decision story; the PBIX contains the complete four-page report.
 
-- **Dataset:** Adventure Works training data; no confidential business data is included in this repository.
-- **Modeling:** star-schema-oriented semantic model using date, customer, product, territory, employee, and fact tables.
-- **Core facts:** Internet Sales and Product Inventory.
-- **Dimensions:** Date, Customer, Product, Sales Territory, and Human Resources.
-- **Transformation:** Power Query was used for data preparation, typing, shaping, and model-ready outputs.
-- **Analysis:** DAX measures provide filter-aware KPIs and business ratios.
+## How the solution was built
 
-The original source `.pbix` is kept untouched. The rebuilt public-portfolio file is [`Enterprise Operations Analytics - Public Portfolio.pbix`](Enterprise%20Operations%20Analytics%20-%20Public%20Portfolio.pbix), with its report-definition corrections documented in [`docs/release-notes.md`](docs/release-notes.md).
+The data was prepared in Power Query and organized as a star-schema-oriented model. Date, customer, product, and sales-territory dimensions filter the Internet Sales fact table, while product and date dimensions support inventory analysis. HR tables provide the workforce perspective. DAX measures then turn these model relationships into filter-aware KPIs rather than disconnected visual totals.
 
-## Key measures
+The report is designed to move from an executive question to an explanation: first identify where revenue and margin are moving, then isolate the product or region behind the result, and finally explore the customer context that can inform retention or commercial action.
 
-| Measure | Business meaning |
+## Measures that drive the analysis
+
+| Measure | Why it matters |
 |---|---|
-| Total Revenue | Revenue in the active filter context. |
-| Total COGS | Cost of goods sold used to assess cost pressure. |
-| Gross Profit Margin | Profitability ratio after cost of goods sold. |
-| YoY Revenue Growth % | Year-over-year change in revenue. |
-| Total Customers | Distinct customers in the selected context. |
-| Avg Orders per Customer | Average order frequency across customers. |
-| Returning Customers | Customers with repeat purchasing activity. |
-| Avg Spending | Average customer spend by selected segment. |
+| `Total Revenue` | Establishes the commercial baseline in the active filter context. |
+| `Total COGS` | Shows the cost required to generate that revenue. |
+| `Gross Profit Margin` | Separates profitable growth from volume without margin. |
+| `YoY Revenue Growth %` | Places current revenue in a prior-year context. |
+| `Total Customers` | Measures reach using distinct customers. |
+| `Avg Orders per Customer` | Indicates purchase frequency and engagement. |
+| `Returning Customers` | Highlights repeat-purchase behavior. |
+| `Avg Spending` | Compares customer value across segments. |
 
-See [`docs/measure-catalog.md`](docs/measure-catalog.md) for the curated measure catalog and [`docs/data-model-and-process.md`](docs/data-model-and-process.md) for the delivery process.
-See [`docs/qa-validation.md`](docs/qa-validation.md) for the reconciliation checks and publication gate.
+The full measure catalog and process explanation are available in [`docs/measure-catalog.md`](docs/measure-catalog.md) and [`docs/data-model-and-process.md`](docs/data-model-and-process.md).
 
-## Verified headline insights
+## A validated business insight
 
-- Commercial Sales reports **$80.45M revenue**, **$79.98M COGS**, and **0.58% gross profit margin** in the current unfiltered view.
-- **Bikes generate $66.30M**, approximately **82.4% of total revenue**, while the displayed category margin is **-1.49%**. This points to a concentration and profitability risk that deserves management attention.
-- The report identifies **Southwest as the strongest region at approximately $18.5M**, while Australia is the weakest market in the current view.
-- In the Customer Analysis page with **2013 selected**, the report shows **12.48K customers**, **1.17 average orders per customer**, **$25M total sales**, and approximately **1K returning customers**.
+In the current unfiltered Commercial Sales view, revenue is `$80.45M`, COGS is `$79.98M`, and gross profit margin is `0.58%`. Bikes generate `$66.30M`, or approximately `82.4%` of total revenue, while the displayed category margin is `-1.49%`.
 
-These are portfolio examples from training data, not claims about a real company.
+The important conclusion is not simply that Bikes are the best-selling category. It is that the largest revenue stream is also the main profitability risk. A commercial manager would use this result to investigate pricing, discounting, product cost, and sales mix before treating revenue growth as healthy growth.
 
-## QA note
+The Customer Analysis page provides the next layer of context. With `2013` selected, it shows `12.48K` customers, `1.17` average orders per customer, `$25M` total sales, and approximately `1K` returning customers. Since these values are rounded in the report, any derived customer percentage is described as approximate.
 
-The public portfolio copy fixes the customer-detail revenue projection to preserve customer row context and aligns HR headcount visuals to the canonical `Active Employee Count` measure. The source file remains unchanged, and the validation evidence is recorded in [`docs/qa-validation.md`](docs/qa-validation.md).
+## Public-release quality controls
 
-## Screenshots
+The original PBIX was preserved. The public portfolio copy corrects two report-definition issues found during review: the customer detail table now uses a row-context-preserving sales aggregation, and HR headcount visuals use the canonical `Active Employee Count` measure. Product-category totals reconcile to Total Revenue within `$1`, which is attributable to displayed rounding.
 
-### Commercial Sales
+This repository contains Adventure Works training data only; the figures are portfolio examples and are not claims about a real company.
 
-![Commercial Sales](assets/commercial-sales.png)
+## Repository contents
 
-### Customer Analysis
-
-![Customer Analysis](assets/customer-analysis-full.png)
+- [`Enterprise Operations Analytics - Public Portfolio.pbix`](Enterprise%20Operations%20Analytics%20-%20Public%20Portfolio.pbix) — rebuilt portfolio report.
+- [`docs/data-model-and-process.md`](docs/data-model-and-process.md) — model architecture and delivery narrative.
+- [`docs/measure-catalog.md`](docs/measure-catalog.md) — selected DAX measure explanations.
+- [`docs/business-insights.md`](docs/business-insights.md) — decision-oriented insight write-up.
+- `assets/` — selected report screenshots.
 
 ## Tools
 
-Power BI · Power Query · DAX · Star-schema modeling · KPI design · Business analysis · Data quality review
+Power BI · Power Query · DAX · Star-schema modeling · KPI design · Business analysis
 
 ## Author
 
